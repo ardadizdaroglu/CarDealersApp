@@ -1,4 +1,4 @@
-package com.adizdaroglu.cardealersapp.ui.theme
+package com.adizdaroglu.cardealersapp.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

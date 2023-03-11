@@ -1,4 +1,4 @@
-package com.adizdaroglu.cardealersapp.ui.theme
+package com.adizdaroglu.cardealersapp.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
