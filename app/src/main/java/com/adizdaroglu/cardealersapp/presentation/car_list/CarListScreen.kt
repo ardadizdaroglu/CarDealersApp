@@ -24,7 +24,6 @@ import androidx.navigation.NavController
 import com.adizdaroglu.cardealersapp.domain.model.Car
 import com.adizdaroglu.cardealersapp.presentation.Screen
 import com.adizdaroglu.cardealersapp.presentation.car_list.components.CarListItem
-import com.google.gson.Gson
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -130,9 +129,10 @@ fun ItemList(state: MutableState<TextFieldValue>, items:List<Car>, navController
         } else {
             val resultList: ArrayList<Car> = arrayListOf()
             for (item in items) {
-                if (item.description?.lowercase(Locale.getDefault())
-                        ?.contains(searchedText.lowercase(Locale.getDefault())) == true
-                ) {
+                if ((item.description?.lowercase(Locale.getDefault())
+                        ?.contains(searchedText.lowercase(Locale.getDefault())) == true) ||
+                    (item.make?.lowercase(Locale.getDefault())
+                        ?.contains(searchedText.lowercase(Locale.getDefault())) == true)) {
                     resultList.add(item)
                 }
             }
