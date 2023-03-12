@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.adizdaroglu.cardealersapp.domain.model.Car
 
 @Composable
@@ -24,8 +25,14 @@ fun CarListItem(
     ) {
         Column(
             modifier = Modifier
-                .padding(20.dp)
+                .padding(20.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            AsyncImage(
+                model = car.images?.get(0)?.url,
+                contentDescription = null
+            )
             Text(
                 text = "${car.description}",
                 textAlign = TextAlign.Left,
