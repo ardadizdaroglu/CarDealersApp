@@ -50,6 +50,8 @@ fun CarListScreen(
         ) {
             CircularProgressIndicator()
         }
+    } else {
+        viewModel.fetchCars()
     }
 }
 

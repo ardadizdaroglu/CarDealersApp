@@ -13,7 +13,7 @@ import javax.inject.Inject
 class GetCarsUseCase @Inject constructor(
     private val repository: CarRepository
 ) {
-    operator fun invoke(): Flow<Resource<List<Car>>> = flow {
+    fun invokeCars(): Flow<Resource<List<Car>>> = flow {
         try {
             emit(Resource.Loading<List<Car>>())
             val cars = repository.getCars().map { it.toCar() }

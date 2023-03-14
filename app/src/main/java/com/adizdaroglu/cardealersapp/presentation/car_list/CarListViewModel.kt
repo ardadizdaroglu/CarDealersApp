@@ -18,11 +18,8 @@ class CarListViewModel @Inject constructor(
     private val _state = mutableStateOf(CarListState())
     val state: State<CarListState> = _state
 
-    init {
-        fetchCars()
-    }
-    private fun fetchCars() {
-        getCarsUseCase().onEach { result ->
+    fun fetchCars() {
+        getCarsUseCase.invokeCars().onEach { result ->
             when(result) {
                 is Resource.Loading -> {
                     _state.value = CarListState(isLoading = true)
