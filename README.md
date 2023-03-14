@@ -22,5 +22,8 @@ Consists of [Presentation](./app/src/main/java/com/adizdaroglu/cardealersapp/pre
 **Functionalities that I added:**
 - ✅ Home page with car dealers lists
 - ✅ Search & filter on car dealers lists
+- ✅ Car Dealer Details page including its information
 
 **Video:**
+
+https://user-images.githubusercontent.com/97453611/225090176-a3d1959e-e9f4-4ec6-9e87-60de1cc089ee.mov
